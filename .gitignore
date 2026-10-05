@@ -1,0 +1,45 @@
+# Local research data and historical workspaces (keep on disk)
+*.dat
+*.csv
+*.json
+/History/
+/Analysis/
+/References/
+/Samples-CRSOS*/
+/Relatorio.pdf
+/GRAPHICAL_STYLE_ANALYSIS.md
+
+# Builds and generated run output
+/build/
+/output/
+*.o
+*.d
+*.out
+*.exe
+a.out
+/crsos
+/cylindrical-crsos
+delta*-run.txt
+equivalence.trace
+
+# Local tool configuration / credentials
+/.agents/
+/.codex/
+/.aws/
+.env
+.env.*
+*.pem
+*.key
+
+# Debug, Python, editors and temporary files
+core
+core.*
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
+*~
+*.swp
+*.swo
+/tmp/
+/temp/
