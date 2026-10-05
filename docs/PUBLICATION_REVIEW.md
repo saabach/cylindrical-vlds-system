@@ -13,9 +13,9 @@ The selected license is the **BSD 3-Clause License**, SPDX identifier `BSD-3-Cla
 
 ## Publication boundary
 
-The exact public file list is [PUBLIC_FILES.txt](PUBLIC_FILES.txt): **31 files**. It includes LICENSE, the README, Makefile, ignore rules, generic legacy source, modular source, tests, documentation and four SVG figures.
+The exact public file list is [PUBLIC_FILES.txt](PUBLIC_FILES.txt): **30 files**. It includes LICENSE, the README, Makefile, generic legacy source, modular source, tests, documentation and four SVG figures.
 
-`.gitignore` excludes `.dat`, `.csv`, `.json`, `History/`, `Analysis/`, `References/`, the original `Samples-CRSOS*/` directories, `Relatorio.pdf`, the local graphical-analysis document, tool/credential directories, generated run output, binaries and caches. These items are not deleted.
+The workspace-specific `.gitignore` is retained locally and is not part of the current public tree. It excludes `.dat`, `.csv`, `.json`, `History/`, `Analysis/`, `References/`, the original `Samples-CRSOS*/` directories, `Relatorio.pdf`, the local graphical-analysis document, tool/credential directories, generated run output, binaries and caches. These items are not deleted.
 
 The initial sandbox presented an empty, read-only `.git` directory. A check outside the sandbox also confirmed that no valid repository existed. An empty local repository on branch `main` was therefore initialized; there was no existing index or history to remove or rewrite. Following the author's approval, only the validated public manifest is staged for the first local commit. Historical data and research material remain local and ignored.
 

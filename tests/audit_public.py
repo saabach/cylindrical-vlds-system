@@ -9,7 +9,7 @@ import sys
 import xml.etree.ElementTree as ET
 
 ROOT=Path(__file__).resolve().parents[1]
-TOP={'.gitignore','LICENSE','Makefile','README.md'}
+TOP={'LICENSE','Makefile','README.md'}
 DIRECTORIES={'legacy','src','tests','figures','docs'}
 MANIFEST=ROOT/'docs/PUBLIC_FILES.txt'
 
