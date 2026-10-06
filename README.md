@@ -67,17 +67,22 @@ The historical cases are parameter choices of the same executable:
 
 These last commands retain **production-sized defaults** and are not quick tests. They are documented examples; preparing this repository did not run production simulations.
 
-| Option | Default | Meaning |
-|---|---:|---|
-| `--delta` | 1 | Maximum allowed neighboring height difference |
-| `--max-time` | 2000 | Final time; measurements at integer thresholds |
-| `--samples` | 10 | Realizations accumulated by one process |
-| `--lx` | 32768 | Fixed lateral length |
-| `--initial-ly` | 4 | Initial expanding length |
-| `--omega` | 1 | Expansion rate; zero disables expansion |
-| `--max-columns` | 2800 | Storage capacity, not the instantaneous $L_y$ |
-| `--seed` | Automatic | Positive odd integer ≤99999999; explicit seed enables replay |
-| `--output-dir` | `output` | Run directory; existing result files are never overwritten |
+<table align="center">
+  <thead>
+    <tr><th>Option</th><th>Default</th><th>Meaning</th></tr>
+  </thead>
+  <tbody>
+    <tr><td align="left"><code>--delta</code></td><td align="right">1</td><td align="left">Maximum allowed neighboring height difference</td></tr>
+    <tr><td align="left"><code>--max-time</code></td><td align="right">2000</td><td align="left">Final time; measurements at integer thresholds</td></tr>
+    <tr><td align="left"><code>--samples</code></td><td align="right">10</td><td align="left">Realizations accumulated by one process</td></tr>
+    <tr><td align="left"><code>--lx</code></td><td align="right">32768</td><td align="left">Fixed lateral length</td></tr>
+    <tr><td align="left"><code>--initial-ly</code></td><td align="right">4</td><td align="left">Initial expanding length</td></tr>
+    <tr><td align="left"><code>--omega</code></td><td align="right">1</td><td align="left">Expansion rate; zero disables expansion</td></tr>
+    <tr><td align="left"><code>--max-columns</code></td><td align="right">2800</td><td align="left">Storage capacity, not the instantaneous <i>L</i><sub>y</sub></td></tr>
+    <tr><td align="left"><code>--seed</code></td><td align="right">Automatic</td><td align="left">Positive odd integer ≤99999999; explicit seed enables replay</td></tr>
+    <tr><td align="left"><code>--output-dir</code></td><td align="right"><code>output</code></td><td align="left">Run directory; existing result files are never overwritten</td></tr>
+  </tbody>
+</table>
 
 Automatic seeding retains the historical `/dev/random` odd-seed selection, with a local seed log. Use different seeds and directories for independent blocks. The RNG is single-process and not reentrant. `--help` lists the options; `make clean` removes build artifacts without deleting results.
 
@@ -95,11 +100,16 @@ It is byte-identical to the archived $\Delta=1$ source. Complete comparison foun
 
 The archived production setup used $L_x=32768$, $L_{y,0}=4$, $\Omega=1$ and $T_{\max}=2000$.
 
-| Height restriction | Complete blocks | Realizations per block | Nominal realizations |
-|---|---:|---:|---:|
-| $\Delta=1$ | 20 | 10 | 200 |
-| $\Delta=2$ | 20 | 10 | 200 |
-| $\Delta=4$ | **12** | 10 | **120** |
+<table align="center">
+  <thead>
+    <tr><th>Height restriction</th><th>Complete blocks</th><th>Realizations per block</th><th>Nominal realizations</th></tr>
+  </thead>
+  <tbody>
+    <tr><td align="left">Δ=1</td><td align="right">20</td><td align="right">10</td><td align="right">200</td></tr>
+    <tr><td align="left">Δ=2</td><td align="right">20</td><td align="right">10</td><td align="right">200</td></tr>
+    <tr><td align="left">Δ=4</td><td align="right"><strong>12</strong></td><td align="right">10</td><td align="right"><strong>120</strong></td></tr>
+  </tbody>
+</table>
 
 The archived analysis directories historically used the labels S1, S2 and S4 for these parameter cases. Reconstruction used block moments before forming global ratios. Time points are correlated; reported errors use whole-block variability/jackknife, not temporal resampling.
 
@@ -109,12 +119,17 @@ A later audit clarified the estimator names: historical `MethodC` computes $B_m$
 
 **Observed finite-time drift.** The following are finite-time effective growth exponents from fits of $\ln W^2$ against $\ln t$, dividing the slope by two. They are **not estimates of $\beta_\infty$**.
 
-| Time window | $\Delta=1$ | $\Delta=2$ | $\Delta=4$ |
-|---|---:|---:|---:|
-| 50–200 | 0.1836 | 0.1878 | 0.1918 |
-| 200–2000 | 0.2628 | 0.2387 | 0.2196 |
-| 1000–2000 | 0.3228 | 0.2826 | 0.2494 |
-| 1800–2000 | 0.3628 | 0.3138 | 0.2724 |
+<table align="center">
+  <thead>
+    <tr><th>Time window</th><th>Δ=1</th><th>Δ=2</th><th>Δ=4</th></tr>
+  </thead>
+  <tbody>
+    <tr><td align="left">50–200</td><td align="right">0.1836</td><td align="right">0.1878</td><td align="right">0.1918</td></tr>
+    <tr><td align="left">200–2000</td><td align="right">0.2628</td><td align="right">0.2387</td><td align="right">0.2196</td></tr>
+    <tr><td align="left">1000–2000</td><td align="right">0.3228</td><td align="right">0.2826</td><td align="right">0.2494</td></tr>
+    <tr><td align="left">1800–2000</td><td align="right">0.3628</td><td align="right">0.3138</td><td align="right">0.2724</td></tr>
+  </tbody>
+</table>
 
 <p align="center">
   <img src="figures/width.svg" width="390" height="314" alt="Squared interface width versus time for all three height restrictions">
