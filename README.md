@@ -116,7 +116,10 @@ A later audit clarified the estimator names: historical `MethodC` computes $B_m$
 | 1000–2000 | 0.3228 | 0.2826 | 0.2494 |
 | 1800–2000 | 0.3628 | 0.3138 | 0.2724 |
 
-<img src="figures/width.svg" width="390" alt="Squared interface width versus time for all three height restrictions"> <img src="figures/beta-effective.svg" width="390" alt="Effective growth exponents with block uncertainties before time rescaling">
+<p align="center">
+  <img src="figures/width.svg" width="390" height="314" alt="Squared interface width versus time for all three height restrictions">
+  <img src="figures/beta-effective.svg" width="390" height="314" alt="Effective growth exponents with block uncertainties before time rescaling">
+</p>
 
 **Conditional late-time collapse.** Relative scales from an uncertainty-weighted collapse over $\tau=t/s_\Delta\in[350,600]$, with $s_1=1$, are
 
@@ -124,11 +127,15 @@ $$s_2=1.3977\pm0.0085,\qquad s_4=2.049\pm0.021.$$
 
 A direct $s_\Delta=\Delta^\phi$ fit gives $\phi\approx0.5074$ (conditional jackknife SE 0.0066), while derivative/window sensitivity spans approximately $0.478\lesssim\phi\lesssim0.539$. The late-time crossover scale is compatible with an approximate $t_\times\propto\sqrt{\Delta}$ dependence, but the available $\Delta=1,2,4$ data are insufficient to establish an exact power law. In particular, covariance-aware fits to the independently optimized ratios show residual lack of fit even with a free power.
 
-<img src="figures/beta-collapse.svg" width="780" alt="Effective exponents after rescaling, with a late-time enlargement">
+<p align="center">
+  <img src="figures/beta-collapse.svg" width="780" alt="Effective exponents after rescaling, with a late-time enlargement">
+</p>
 
 The weighted dispersion cost falls by approximately **99.53%**. $W^2$ also aligns better after time and amplitude rescaling, but skewness and kurtosis are not described by the same scale with comparable success. This supports a common crossover **only partially**; structured residuals remain, and collapse does not determine $\beta_\infty$.
 
-<img src="figures/crossover-scale.svg" width="420" alt="Relative crossover scales versus Delta, compared with a fitted power and square root">
+<p align="center">
+  <img src="figures/crossover-scale.svg" width="420" alt="Relative crossover scales versus Delta, compared with a fitted power and square root">
+</p>
 
 The last figure shows the reproduced **unweighted baseline** ratios 1:1.4011:2.0516 and a GLS fit, distinct from the weighted direct-fit estimates above. [All figure captions and provenance](figures/README.md).
 
